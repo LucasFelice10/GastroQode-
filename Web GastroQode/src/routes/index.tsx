@@ -18,33 +18,23 @@ import {
   Zap,
 } from "lucide-react";
 import { useState, type MouseEvent, type ReactNode } from "react";
-import logoAsset from "../assets/gastroqode-logo-v2.png.asset.json";
+import logoAsset from "../assets/gastroqode-logo-v2.png";
 import menuMockup from "../assets/qresto-menu-mockup.jpg";
 import qrImage from "../assets/qresto-qr.png";
-import video1Mailo from "../assets/video-1-mailo.mp4.asset.json";
-import video2Kaiyo from "../assets/video-2-kaiyo.mp4.asset.json";
-import video3CoffeeHouse from "../assets/video-3-coffee-house.mp4.asset.json";
-import video4SmashedBabies from "../assets/video-4-smashed-babies.mp4.asset.json";
-import mailoBg from "../assets/mailo.jpg.asset.json";
-import kaiyoBg from "../assets/kaiyo.jpg.asset.json";
-import coffeeHouseBg from "../assets/coffee-house.jpg.asset.json";
-import smashedBabiesBg from "../assets/smashed-babies.jpg.asset.json";
-import mailoQr from "../assets/mailo-qr.png.asset.json";
-import kaiyoQr from "../assets/kaiyo-qr.png.asset.json";
-import coffeeHouseQr from "../assets/coffee-house-qr.png.asset.json";
-import smashedBabiesQr from "../assets/smashed-babies-qr.png.asset.json";
+import video1Mailo from "../assets/video-1-mailo.mp4";
+import video2Kaiyo from "../assets/video-2-kaiyo.mp4";
+import video3CoffeeHouse from "../assets/video-3-coffee-house.mp4";
+import video4SmashedBabies from "../assets/video-4-smashed-babies.mp4";
+import mailoBg from "../assets/mailo.jpg";
+import kaiyoBg from "../assets/kaiyo.jpg";
+import coffeeHouseBg from "../assets/coffee-house.jpg";
+import smashedBabiesBg from "../assets/smashed-babies.jpg";
+import mailoQr from "../assets/mailo-qr.png";
+import kaiyoQr from "../assets/kaiyo-qr.png";
+import coffeeHouseQr from "../assets/coffee-house-qr.png";
+import smashedBabiesQr from "../assets/smashed-babies-qr.png";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "GastroQode | Menús digitales visuales para restaurantes" },
-      { name: "description", content: "Transformá la carta de tu restaurante en un menú digital visual, ágil y siempre actualizado con GastroQode." },
-      { property: "og:title", content: "GastroQode | Tu menú, más visual que nunca" },
-      { property: "og:description", content: "Menús QR con fotos reales, actualización ágil y activación de cartas especiales." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: Index,
 });
 
@@ -77,7 +67,7 @@ function TiltCard({ children, className = "" }: { children: ReactNode; className
 }
 
 function Brand() {
-  return <a href="#inicio" className="brand" aria-label="GastroQode, ir al inicio"><img src={logoAsset.url} alt="GastroQode" className="brand-logo" /></a>;
+  return <a href="#inicio" className="brand" aria-label="GastroQode, ir al inicio"><img src={logoAsset} alt="GastroQode" className="brand-logo" /></a>;
 }
 
 function Header() {
@@ -106,10 +96,10 @@ function Services() {
 // Para reemplazar un video, cambiá el import correspondiente:
 // UPLOAD YOUR VIDEO HERE: video-1-mailo.mp4 / video-2-kaiyo.mp4 / video-3-coffee-house.mp4 / video-4-smashed-babies.mp4
 const caseStudies = [
-  { video: video1Mailo.url /* video-1-mailo.mp4 */, poster: mailoBg.url, tag: "Bodegón", name: "Mailo", menu: "https://lucasfelice10.github.io/Menu-Bodegon-/", qr: mailoQr.url, quote: "¡Las ventas de Mailo subieron un 30% en un mes!", author: "Juan, dueño" },
-  { video: video2Kaiyo.url /* video-2-kaiyo.mp4 */, poster: kaiyoBg.url, tag: "Sushi", name: "Kaiyo", menu: "https://lucasfelice10.github.io/Sushi-Kaiyo/", qr: kaiyoQr.url, quote: "A los clientes les encanta ver el menú digital y sus fotos.", author: "Kenji, dueño" },
-  { video: video3CoffeeHouse.url /* video-3-coffee-house.mp4 */, poster: coffeeHouseBg.url, tag: "Cafetería", name: "Coffee House", menu: "https://lucasfelice10.github.io/Coffee-House-Menu/", qr: coffeeHouseQr.url, quote: "Es súper ágil y dinámico para el café de todos los días.", author: "Laura, dueña" },
-  { video: video4SmashedBabies.url /* video-4-smashed-babies.mp4 */, poster: smashedBabiesBg.url, tag: "Hamburguesería", name: "Smashed Babies", menu: "https://lucasfelice10.github.io/Hamburgueseria-Menu/", qr: smashedBabiesQr.url, quote: "¡Un antes y un después en nuestro servicio al cliente!", author: "Tomás, dueño" },
+  { video: video1Mailo /* video-1-mailo.mp4 */, poster: mailoBg, tag: "Bodegón", name: "Mailo", menu: "https://lucasfelice10.github.io/Menu-Bodegon-/", qr: mailoQr, quote: "¡Las ventas de Mailo subieron un 30% en un mes!", author: "Juan, dueño" },
+  { video: video2Kaiyo /* video-2-kaiyo.mp4 */, poster: kaiyoBg, tag: "Sushi", name: "Kaiyo", menu: "https://lucasfelice10.github.io/Sushi-Kaiyo/", qr: kaiyoQr, quote: "A los clientes les encanta ver el menú digital y sus fotos.", author: "Kenji, dueño" },
+  { video: video3CoffeeHouse /* video-3-coffee-house.mp4 */, poster: coffeeHouseBg, tag: "Cafetería", name: "Coffee House", menu: "https://lucasfelice10.github.io/Coffee-House-Menu/", qr: coffeeHouseQr, quote: "Es súper ágil y dinámico para el café de todos los días.", author: "Laura, dueña" },
+  { video: video4SmashedBabies /* video-4-smashed-babies.mp4 */, poster: smashedBabiesBg, tag: "Hamburguesería", name: "Smashed Babies", menu: "https://lucasfelice10.github.io/Hamburgueseria-Menu/", qr: smashedBabiesQr, quote: "¡Un antes y un después en nuestro servicio al cliente!", author: "Tomás, dueño" },
 ];
 
 function Stars() {
